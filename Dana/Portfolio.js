@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, FlatList } from "react-native";
 import Pie from "react-native-pie";
+import Graphic from "./components/Portfolio_Comps/Graphic";
 
 export default function Portfolio() {
   const [items, setItems] = useState([
@@ -12,30 +13,7 @@ export default function Portfolio() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Doughnut</Text>
-      <Pie
-        radius={80}
-        innerRadius={50}
-        sections={[
-          {
-            percentage: 10,
-            color: "#C70039",
-          },
-          {
-            percentage: 20,
-            color: "#44CD40",
-          },
-          {
-            percentage: 30,
-            color: "#404FCD",
-          },
-          {
-            percentage: 40,
-            color: "#EBD22F",
-          },
-        ]}
-        strokeCap={"butt"}
-      />
+      <Graphic />
     </View>
   );
 }
