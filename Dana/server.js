@@ -15,5 +15,12 @@ var firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+  firebase.initializeApp(config);
+}
 
+function readAccountData() {
+  firebase.database().ref('accounts/').on('value', function (snapshot) {
+    console.log(snapshot.val())
+  });
+}

@@ -8,6 +8,8 @@ import {
   FlatList,
   ScrollView,
 } from "react-native";
+
+import Server from "../../server";
 import Constants from "expo-constants";
 
 const DATA = [];
@@ -38,7 +40,7 @@ const getItem = (data, index) => {
     desc: `$${
       Math.random().toString().substring(3, 4) +
       Math.random().toString().substring(1, 4)
-    } Starbucks`,
+      } Starbucks`,
   };
 };
 
